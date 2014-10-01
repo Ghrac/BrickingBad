@@ -38,85 +38,85 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
 
     private Image    imaImagenApplet;   // Imagen a proyectar en Applet	
     private Graphics graGraficaApplet;  // Objeto grafico de la Imagen
-    private int iVidasPlayer;
-    private int iVidasXtasis;
-    private int iVidasHeroina;
-    private int iVidasCocaina;
-    private int iVidasMeth;
-    private int iVidasEspecial;
-    private int iScore;
-    private Base basBola;
-    private Base basBase;
-    private Base basBrickCoca;
-    private Base basBrickHero;
-    private Base basBrickXsis;
-    private Base basBrickMeth;
-    private Base basBrickEspecial;
-    private Base basEspMasVida;
-    private Base basEspMenosVida;
-    private Base basEspX2Power;
-    private Base basEspX2Vel;
-    private Base basEspMasBarra;
-    private Base basEspMenosBarra;
-    private Image imaBola;
-    private Image imaBase;
-    private Image imaBolaFuego;
-    private Image imaBaseChica;
-    private Image imaBaseGrande;
-    private Image imaBrickCoca;
-    private Image imaBrickHero;
-    private Image imaBrickXsis;
-    private Image imaBrickMeth;
-    private Image imaBrickCocaHalf;
-    private Image imaBrickHeroHalf;
-    private Image imaBrickXsisHalf;
-    private Image imaBrickMethHalf;
-    private Image imaBrickEspecial;
-    private Image imaEspMasVida;
-    private Image imaEspMenosVida;
-    private Image imaEspX2Power;
-    private Image imaEspX2Vel;
-    private Image imaEspMasBarra;
-    private Image imaEspMenosBarra;
-    private Image imaAnimHero1;
-    private Image imaAnimHero2;
-    private Image imaAnimCoca1;
-    private Image imaAnimCoca2;
-    private Image imaAnimXsis1;
-    private Image imaAnimXsis2;
-    private Image imaAnimMeth1;
-    private Image imaAnimMeth2;
-    private int iDirBola;
-    private int iDirBase;
-    private int iVelBase;
-    private int iLevel;
-    private int iBricks;
-    private int iRan;
-    private boolean bPausa;
-    private boolean bSoltarBola;
-    private boolean bInstrucciones;
-    private boolean bGameStart;
-    private boolean bSpace;
-    private boolean bEspecial;
-    private boolean bEndGame;
-    private LinkedList lnkCoca;
-    private LinkedList lnkHero;
-    private LinkedList lnkXsis;
-    private LinkedList lnkMeth;
-    private LinkedList lnkEspecial;
-    private SoundClip souMusica;
-    private SoundClip souIntro;
-    private SoundClip souGameStart;
-    private SoundClip souBrickCrash;
-    private SoundClip souEndGame;
-    private Animacion aniHero;
-    private Animacion aniCoca;
-    private Animacion aniXsis;
-    private Animacion aniMeth;
-    private long tiempoActualHero;
-    private long tiempoActualCoca;
-    private long tiempoActualXsis;
-    private long tiempoActualMeth;
+    private int iVidasPlayer;           //Vidas de jugador
+    private int iVidasXtasis;           //Vidas de Xtasis
+    private int iVidasHeroina;          //Vidas de Heroina
+    private int iVidasCocaina;          //Vidas de Cocaina
+    private int iVidasMeth;             //Vidas de Meth
+    private int iVidasEspecial;         //Vidas del Brick Especial
+    private int iScore;                 //Score del jugador
+    private Base basBola;               //Objeto Base Bola
+    private Base basBase;               //Objeto Base Base
+    private Base basBrickCoca;          //Objeto BrickCoca
+    private Base basBrickHero;          //Objeto BrickHero
+    private Base basBrickXsis;          //Objeto BrickXtasis
+    private Base basBrickMeth;          //Objeto BrickMeth
+    private Base basBrickEspecial;      //Objeto BrickEspecial
+    private Base basEspMasVida;         //Objeto Especial Mas Vida
+    private Base basEspMenosVida;       //Objeto Especial Menos Vida
+    private Base basEspX2Power;         //Objeto Especial Poder por Dos
+    private Base basEspX2Vel;           //Objeto Especial Velocidad por Dos
+    private Base basEspMasBarra;        //Objeto Especial Barra Grande
+    private Base basEspMenosBarra;      //Objeto Especial Barra Chica
+    private Image imaBola;              //Imagen Bola
+    private Image imaBase;              //Imagen Base
+    private Image imaBolaFuego;         //Imagen Bola Fuego
+    private Image imaBaseChica;         //Imagen Base Chica
+    private Image imaBaseGrande;        //Imagen Base Grande
+    private Image imaBrickCoca;         //Imagen BrickCoca
+    private Image imaBrickHero;         //Imagen BrickHero
+    private Image imaBrickXsis;         //Imagen BrickXsis
+    private Image imaBrickMeth;         //Imagen BrickMeth
+    private Image imaBrickCocaHalf;     //Imagen BrickCoca Roto
+    private Image imaBrickHeroHalf;     //Imagen BrickHero Roto
+    private Image imaBrickXsisHalf;     //Imagen BrickXsis Roto
+    private Image imaBrickMethHalf;     //Imagen BrickMeth Roto
+    private Image imaBrickEspecial;     //Imagen BrickEspecial
+    private Image imaEspMasVida;        //Imagen Especial Mas Vida
+    private Image imaEspMenosVida;      //Imagen Especial Menos Vida
+    private Image imaEspX2Power;        //Imagen Especial Poder por Dos
+    private Image imaEspX2Vel;          //Imagen Especial Velocidad por Dos
+    private Image imaEspMasBarra;       //Imagen Especial Barra Grande
+    private Image imaEspMenosBarra;     //Imagen Especial Barra Chica
+    private Image imaAnimHero1;         //Imagen Animacion Hero1
+    private Image imaAnimHero2;         //Imagen Animacion Hero2
+    private Image imaAnimCoca1;         //Imagen Animacion Coca1
+    private Image imaAnimCoca2;         //Imagen Animacion Coca2
+    private Image imaAnimXsis1;         //Imagen Animacion Xsis1
+    private Image imaAnimXsis2;         //Imagen Animacion Xsis2
+    private Image imaAnimMeth1;         //Imagen Animacion Meth1
+    private Image imaAnimMeth2;         //Imagen Animacion Meth2
+    private int iDirBola;               //Int Direccion de Bola
+    private int iDirBase;               //Int Direccion de Base
+    private int iVelBase;               //Int Velocidad de Base
+    private int iLevel;                 //Int Nivel
+    private int iBricks;                //Int Cantidad de Bricks Muertos
+    private int iRan;                   //Int Valor al Azar
+    private boolean bPausa;             //Boleano para Pausa
+    private boolean bSoltarBola;        //Boleano para Soltar Bola de Base
+    private boolean bInstrucciones;     //Boleano para Instrucciones
+    private boolean bGameStart;         //Boleano para Empezar Juego
+    private boolean bSpace;             //Boleano para Controlar click espacio
+    private boolean bEspecial;          //Boleano para uso Especial
+    private boolean bEndGame;           //Boleano para Fin de Juego
+    private LinkedList lnkCoca;         //Lista Encadenada de Coca
+    private LinkedList lnkHero;         //Lista Encadenada de Hero
+    private LinkedList lnkXsis;         //Lista Encadenada de Xsis
+    private LinkedList lnkMeth;         //Lista Encadenada de Meth
+    private LinkedList lnkEspecial;     //Lista Encadenada Especial
+    private SoundClip souMusica;        //Sound Clip Musica de Juego
+    private SoundClip souIntro;         //Sound Clip Introduccion
+    private SoundClip souGameStart;     //Sound Clip Juego Empezado
+    private SoundClip souBrickCrash;    //Sound Clip Crash de Bricks
+    private SoundClip souEndGame;       //Sound Clip Fin de Juego
+    private Animacion aniHero;          //Animacion Hero
+    private Animacion aniCoca;          //Animacion Coca
+    private Animacion aniXsis;          //Animacion Xsis
+    private Animacion aniMeth;          //Animacion Meth
+    private long tiempoActualHero;      //Tiempo Hero
+    private long tiempoActualCoca;      //Tiempo Coca
+    private long tiempoActualXsis;      //Tiempo Xsis
+    private long tiempoActualMeth;      //Tiempo Meth
 
     public BrickingBad() {
     /** 
@@ -128,41 +128,42 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
      */
         // hago el applet de un tamaño 600,600
         setSize(600, 600);
+        //inicializo variables
+        iVidasPlayer = 5; //vidas de jugador
+        iVidasMeth = 1; //vidas de Meth
+        iVidasCocaina = 1;//vidas de Coca
+        iVidasHeroina = 1;//vidas de Hero
+        iVidasXtasis = 1;//vidas de Xtasis
+        iDirBola = 0; //direccion de bola estatica
+        iDirBase = 0; //direccion de base estatica
+        iVelBase = 10; //velocidad de base
+        iScore = 0; //score de jugador
+        iLevel = 1; //nivel de juego
+        iBricks = 0; //cantidad de bricks destruidos
+        iRan = 0; //numero al azar de 0 a 5
+        bPausa = true; //pausa
+        bSoltarBola = false; //soltar la bola de la base
+        bInstrucciones = true; //mostrar instrucciones
+        bGameStart = false; //empezar juego
+        bSpace = false; //seleccion de tecla espacio
+        bEspecial = false; //uso de poderes
+        bEndGame = false; //fin de juego
+        tiempoActualHero = 0; //tiempo para animacion de hero
+        tiempoActualCoca = 0; //tiempo para animacion de coca
+        tiempoActualXsis = 0; //tiempo para animacion de xsis
+        tiempoActualMeth = 0; //tiempo para animacion de meth
         
-        iVidasPlayer = 5;
-        iVidasMeth = 1;
-        iVidasCocaina = 1;
-        iVidasHeroina = 1;
-        iVidasXtasis = 1;
-        iDirBola = 0;
-        iDirBase = 0;
-        iVelBase = 10;
-        iScore = 0;
-        iLevel = 3;
-        iBricks = 0;
-        iRan = 0;
-        bPausa = true;
-        bSoltarBola = false;
-        bInstrucciones = true;
-        bGameStart = false;
-        bSpace = false;
-        bEspecial = false;
-        bEndGame = false;
-        tiempoActualHero = 0;
-        tiempoActualCoca = 0;
-        tiempoActualXsis = 0;
-        tiempoActualMeth = 0;
-        
+        //creo los sonidos
         souMusica = new SoundClip("InGameMusic.wav");
         souMusica.setLooping(true);
         souIntro = new SoundClip("IntroSound.wav");
         souIntro.setLooping(true);
-        souIntro.play();
+        souIntro.play(); //que empiece el sonido de intro
         souGameStart = new SoundClip("GameStart.wav");
         souBrickCrash = new SoundClip("BrickCrash.wav");
         souEndGame = new SoundClip("HighScoreMusic.wav");
         
-        
+        //para que lea el teclado
         addKeyListener(this);
         
         // se crea imagen de Base
@@ -170,9 +171,11 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 getImage(this.getClass().getResource("barra.png"));
         // Creo la Base
 	basBase = new Base(0, 0, imaBase, iVidasPlayer);
+        //posiciono la base al centro, abajo
         basBase.setX(((getWidth() / 2) - (basBase.getAncho() / 2)));
         basBase.setY(getHeight() - basBase.getAlto());
         
+        //creo imagenes extra de base
         imaBaseChica = Toolkit.getDefaultToolkit().
                 getImage(this.getClass().getResource("barracorta.png"));
         imaBaseGrande = Toolkit.getDefaultToolkit().
@@ -184,8 +187,10 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
         // Creo la Bola
 	basBola = new Base(0, 0, imaBola, 1);
         basBola.setX(700);
+        //velocidad de bola en 6
         basBola.setVelocidad(6);
         
+        //se crea la imagen de bola en fuego
         imaBolaFuego = Toolkit.getDefaultToolkit().
                 getImage(this.getClass().getResource("pelotafire.png"));
         
@@ -225,62 +230,67 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
         // creo objeto
         basEspMenosBarra = new Base(1000, 0, imaEspMenosBarra, 0);
         
-        
+        //se crean imagenes para animacion de hero
         imaAnimHero1 = Toolkit.getDefaultToolkit().
                 getImage(this.getClass().getResource("brickheroinarompe1.png"));
         imaAnimHero2 = Toolkit.getDefaultToolkit().
                 getImage(this.getClass().getResource("brickheroinarompe2.png"));
         
+        //creo animacion
         aniHero = new Animacion();
         aniHero.sumaCuadro(imaAnimHero1, 1500);
         aniHero.sumaCuadro(imaAnimHero2, 1500);
         
-        
+        //se crean imagenes para animacion de coca
         imaAnimCoca1 = Toolkit.getDefaultToolkit().
                 getImage(this.getClass().getResource("brickcocainarompe1.png"));
         imaAnimCoca2 = Toolkit.getDefaultToolkit().
                 getImage(this.getClass().getResource("brickcocainarompe2.png"));
         
+        //creo animacion
         aniCoca = new Animacion();
         aniCoca.sumaCuadro(imaAnimCoca1, 1500);
         aniCoca.sumaCuadro(imaAnimCoca2, 1500);
         
-        
+        //se crean imagenes para animacion de xsis
         imaAnimXsis1 = Toolkit.getDefaultToolkit().
                 getImage(this.getClass().getResource("brickXtasisrompe1.png"));
         imaAnimXsis2 = Toolkit.getDefaultToolkit().
                 getImage(this.getClass().getResource("brickXtasisrompe2.png"));
         
+        //creo animacion
         aniXsis = new Animacion();
         aniXsis.sumaCuadro(imaAnimXsis1, 1500);
         aniXsis.sumaCuadro(imaAnimXsis2, 1500);
         
-        
+        //se crean imagenes para animacion de meth
         imaAnimMeth1 = Toolkit.getDefaultToolkit().
                 getImage(this.getClass().getResource("methrompe1.png"));
         imaAnimMeth2 = Toolkit.getDefaultToolkit().
                 getImage(this.getClass().getResource("methrompe2.png"));
         
+        //creo animacion
         aniMeth = new Animacion();
         aniMeth.sumaCuadro(imaAnimMeth1, 1500);
         aniMeth.sumaCuadro(imaAnimMeth2, 1500);
         
-        
+        //creo las listas encadenadas de los bricks
         lnkCoca = new LinkedList();
         lnkHero = new LinkedList();
         lnkXsis = new LinkedList();
         lnkMeth = new LinkedList();
         lnkEspecial = new LinkedList();
         
-        
+        //creo a 4 bricks especiales
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickEspecial
             imaBrickEspecial = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickespecial.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickEspecial
             basBrickEspecial = new Base(0, 0, imaBrickEspecial, iVidasEspecial);
             basBrickEspecial.setVidas(1);
             basBrickEspecial.setVelocidad(1);
+            //posiciono a los bricks
             if(iI == 0) {
                 basBrickEspecial.setX(450);
                 basBrickEspecial.setY(100);
@@ -297,21 +307,25 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 basBrickEspecial.setX(150);
                 basBrickEspecial.setY(250);
             }
+            //agrego a la lista encadenada
             lnkEspecial.add(basBrickEspecial);
         }
         
-        
+        //creo imagen de coca rota
         imaBrickCocaHalf = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().
                             getResource("brickcocainacrack.png"));
         
+        //creo a 4 bricks de coca
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickCoca
             imaBrickCoca = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickcocaina.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickCoca
             basBrickCoca = new Base(0, 0, imaBrickCoca, iVidasCocaina);
+            //6 vidas para coca
             basBrickCoca.setVidas(6);
+            //posiciono a los bricks
             if(iI == 0) {
                 basBrickCoca.setX(50);
                 basBrickCoca.setY(250);
@@ -332,20 +346,25 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 basBrickCoca.setY(250);
                 basBrickCoca.setiNumLista(3);
             }
+            //agrego a lista encadenada
             lnkCoca.add(basBrickCoca);
         }
         
+        //creo imagen de hero rota
         imaBrickHeroHalf = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().
                             getResource("brickheroinacrack.png"));
         
+        //creo 4 bricks de hero
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickHero
             imaBrickHero = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickheroina.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickHero
             basBrickHero = new Base(0, 0, imaBrickHero, iVidasHeroina);
-            basBrickHero.setVidas(4);
+            //6 vidas para hero
+            basBrickHero.setVidas(6);
+            //posiciono los bricks de hero
             if(iI == 0) {
                 basBrickHero.setX(50);
                 basBrickHero.setY(100);
@@ -366,20 +385,25 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 basBrickHero.setY(100);
                 basBrickHero.setiNumLista(3);
             }
+            //se agregan a lista encadenada
             lnkHero.add(basBrickHero);
         }
         
+        //creo imagen xsis rota
         imaBrickXsisHalf = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().
                             getResource("brickxtasiscrack.png"));
         
+        //creo 4 bricks de xsis
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickXsis
             imaBrickXsis = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickxtasis.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickXsis
             basBrickXsis = new Base(0, 0, imaBrickXsis, iVidasXtasis);
+            //2 vidas para Xsis
             basBrickXsis.setVidas(2);
+            //posiciono los bricks de xsis
             if(iI == 0) {
                 basBrickXsis.setX(50);
                 basBrickXsis.setY(150);
@@ -400,19 +424,24 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 basBrickXsis.setY(150);
                 basBrickXsis.setiNumLista(3);
             }
+            //agrego a lista encadenada
             lnkXsis.add(basBrickXsis);
         }
         
+        //creo imagen meth rota
         imaBrickMethHalf = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickmethcrack.png"));
         
+        //creo 4 bricks de meth
         for(int iI = 0; iI < 4; iI++){
             // se crea imagen de BrickCoca1
             imaBrickMeth = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickmeth.png"));
             // Creo a BrickCoca1
             basBrickMeth = new Base(0, 0, imaBrickMeth, iVidasMeth);
+            //8 vidas para meth
             basBrickMeth.setVidas(8);
+            //posiciono los bricks
             if(iI == 0) {
                 basBrickMeth.setX(50);
                 basBrickMeth.setY(200);
@@ -433,6 +462,7 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 basBrickMeth.setY(200);
                 basBrickMeth.setiNumLista(3);
             }
+            //agrego a lista encadenada
             lnkMeth.add(basBrickMeth);
         }
         
@@ -454,8 +484,8 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
     }
     
     public void run () {
-        // se realiza el ciclo del juego mientras jugador tenga vidas
-        while (/*(iVidasPlayer > 0) && (iLevel < 4)*/true) {
+        // se realiza el ciclo del juego mientras hasta que se cierre
+        while (true) {
             /* mientras dure el juego, se actualizan posiciones de jugadores
                se checa si hubo colisiones para desaparecer jugadores o corregir
                movimientos y se vuelve a pintar todo
@@ -486,7 +516,7 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
      * 
      */
     public void actualiza() {
-        
+        //Modifico tiempos para hero, coca, xsis y meth
         if(basBrickHero.getVidas() < 1) {
             aniHero.actualiza(tiempoActualHero);
             tiempoActualHero = tiempoActualHero + 1;
@@ -507,8 +537,11 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             tiempoActualMeth = tiempoActualMeth + 1;
         }
         
+        
+        //velocidad de base
         basBase.setVelocidad(iVelBase);
         
+        //si ya se rompieron los bricks, avanza de nivel
         if(iBricks == 16) {
             iLevel = iLevel + 1;
             //bNewLevel = true;
@@ -516,6 +549,7 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             iBricks = 0;
         }
         
+        //si ya perdio el jugador
         if(iVidasPlayer < 1) {
             if(!bEndGame) {
                 bSoltarBola = false;
@@ -525,51 +559,64 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             }
         }
         
+        //pausar en instrucciones
         if(bInstrucciones){
             bPausa = true;
         }
         
+        //si la direccion de base es 0, no se hace nada
         if(iDirBase == 0) {
             
         }
+        //si es uno, va hacia la derecha
         else if(iDirBase == 1) {
             basBase.derecha();
         }
+        //si es dos, va a la izquierda
         else if(iDirBase == 2) {
             basBase.izquierda();
         }
         
+        //si no hemos soltado la bola, posicionala encima de la base
         if(!bSoltarBola) {
             basBola.setX((basBase.getX() + (basBase.getAncho() / 2)) -
                     (basBola.getAncho() / 2));
             basBola.setY(basBase.getY() - basBola.getAlto() - 1);
         }
+        //si ya se solto la bola
         else {
+            //si la direccion es 0, regresar a la base
             if(iDirBola == 0) {
                 bSoltarBola = false;
                 basBola.setX((basBase.getX() + (basBase.getAncho() / 2)) -
                     (basBola.getAncho() / 2));
                 basBola.setY(basBase.getY() - basBola.getAlto() - 1);
             }
+            //si es 1 ir a la derecha, arriba
             else if(iDirBola == 1) {
                 basBola.derecha();
                 basBola.arriba();
             }
+            //si es 2 ir a la izquierda, arriba
             else if(iDirBola == 2) {
                 basBola.izquierda();
                 basBola.arriba();
             }
+            //si es 3 ir a la derecha, abajo
             else if(iDirBola == 3) {
                 basBola.derecha();
                 basBola.abajo();
             }
+            //si es 4 ir a la izquierda, abajo
             else if(iDirBola == 4) {
                 basBola.izquierda();
                 basBola.abajo();
             }
         }
         
+        //si se golpeo un brick especial
         if(bEspecial) {
+            //verfica que poder te dara y los manda hacia abajo
             switch(iRan) {
                 case 0:
                     basEspMenosVida.setY(basEspMenosVida.getY() + 2);
@@ -602,17 +649,20 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
      * 
      */
     public void checaColision() {
+        //si la base choca en la izquierda se queda ahi
         if(basBase.getX() < 0) {
             basBase.setX(0);
             iDirBase = 0;
         }
+        //si choca en la derecha se queda ahi
         else if((basBase.getX() + basBase.getAncho()) > getWidth()) {
             basBase.setX(getWidth() - basBase.getAncho());
             iDirBase = 0;
         }
         
-        
+        //si la bola choca con el fondo
         if((basBola.getY() + basBola.getAlto()) >= getHeight()) {
+            //reposiciona la bola, quita vida, resetea velocidad, imagen y poder
             iDirBola = 0;
             bSpace = false;
             iVidasPlayer = iVidasPlayer - 1;
@@ -621,7 +671,9 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             basBase.setImagen(imaBase);
             basBola.setImagen(imaBola);
         }
+        //si choca a la izquierda
         else if(basBola.getX() <= 0) {
+            //depende de donde viene, es a donde va
             if(iDirBola == 2) {
                 iDirBola = 1;
             }
@@ -629,7 +681,9 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 iDirBola = 3;
             }
         }
+        //si choca a la derecha
         else if((basBola.getX() + basBola.getAncho()) >= getWidth()) {
+            //depende a donde viene, es a donde va
             if(iDirBola == 1) {
                 iDirBola = 2;
             }
@@ -637,40 +691,122 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 iDirBola = 4;
             }
         }
+        //si choca arriba (restando 20 del tope)
         else if(basBola.getY() <= 20) {
-            if(iDirBola == 1) {
-                iDirBola = 3;
+            //si va para la misma direccion la base y la bola
+            //se resta velocidad a la bola
+            //si va para diferente direccion la base y la bola
+            //se suma velocidad a la bola
+            if(iDirBase == 1) {
+                if(iDirBola == 1) {
+                    iDirBola = 3;
+                    basBola.setVelocidad(basBola.getVelocidad() - 1);
+                }
+                else if(iDirBola == 2) {
+                    iDirBola = 4;
+                    basBola.setVelocidad(basBola.getVelocidad() + 1);
+                }
             }
-            else if(iDirBola == 2) {
-                iDirBola = 4;
+            else if(iDirBase == 2) {
+                if(iDirBola == 1) {
+                    iDirBola = 3;
+                    basBola.setVelocidad(basBola.getVelocidad() + 1);
+                }
+                else if(iDirBola == 2) {
+                    iDirBola = 4;
+                    basBola.setVelocidad(basBola.getVelocidad() - 1);
+                }
+            }
+            else {
+                if(iDirBola == 1) {
+                    iDirBola = 3;
+                }
+                else if(iDirBola == 2) {
+                    iDirBola = 4;
+                }
             }
         }
         
-        
+        //si la bola choca con la base
         if(basBase.colisiona(basBola)){
+            //depende de la direccion a la que venga la bola, va a direccion
+            //contraria
+            //si la base y la bola van a la misma direccion
+            //se le resta velocidad a la bola
+            //si van en direccion contraria
+            //se le suma velocidad a la bola
             if(basBase.getY() > (basBola.getY() + basBola.getAlto())) {
-                if(iDirBola == 3) {
-                    iDirBola = 4;
+                if(iDirBase == 1) {
+                    if(iDirBola == 3) {
+                        iDirBola = 4;
+                        basBola.setVelocidad(basBola.getVelocidad() - 1);
+                    }
+                    else if(iDirBola == 4) {
+                        iDirBola = 3;
+                        basBola.setVelocidad(basBola.getVelocidad() + 1);
+                    }
                 }
-                else if(iDirBola == 4) {
-                    iDirBola = 3;
+                else if(iDirBase == 2) {
+                    if(iDirBola == 3) {
+                        iDirBola = 4;
+                        basBola.setVelocidad(basBola.getVelocidad() + 1);
+                    }
+                    else if(iDirBola == 4) {
+                        iDirBola = 3;
+                        basBola.setVelocidad(basBola.getVelocidad() - 1);
+                    }
+                }
+                else {
+                    if(iDirBola == 3) {
+                        iDirBola = 4;
+                    }
+                    else if(iDirBola == 4) {
+                        iDirBola = 3;
+                    }
                 }
             }
             
             else if((basBola.getY() + basBola.getAlto()) >= basBase.getY()) {
-                if(iDirBola == 3) {
-                    iDirBola = 1;
+                if(iDirBase == 1) {
+                    if(iDirBola == 3) {
+                        iDirBola = 1;
+                        basBola.setVelocidad(basBola.getVelocidad() - 1);
+                    }
+                    else if(iDirBola == 4) {
+                        iDirBola = 2;
+                        basBola.setVelocidad(basBola.getVelocidad() + 1);
+                    }
                 }
-                
-                else if(iDirBola == 4) {
-                    iDirBola = 2;
+                else if(iDirBase == 2) {
+                    if(iDirBola == 3) {
+                        iDirBola = 1;
+                        basBola.setVelocidad(basBola.getVelocidad() + 1);
+                    }
+                    else if(iDirBola == 4) {
+                        iDirBola = 2;
+                        basBola.setVelocidad(basBola.getVelocidad() - 1);
+                    }
+                }
+                else {
+                    if(iDirBola == 3) {
+                        iDirBola = 1;
+                    }
+
+                    else if(iDirBola == 4) {
+                        iDirBola = 2;
+                    }
                 }
             }
         }
         
+        //se checa colision con la bola y los bricks de hero
         for(Object objHero : lnkHero) {
             basBrickHero = (Base) objHero;
-            
+            //dependiendo de como le pegue al brick, es hacia donde va la bola
+            //la bola le quita vida a los bricks dependiendo de 
+            //la vida de la bola
+            //si la bola destrulle el brick
+            //se le suma score al jugador
             if((basBola.getY() > (basBrickHero.getY() +
                     (basBrickHero.getAlto() / 2))) && 
                     (basBola.getY() < (basBrickHero.getY() +
@@ -785,9 +921,14 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             }
         }
         
+        //se checa colision con la bola y los bricks de coca
         for(Object objCoca : lnkCoca) {
             basBrickCoca = (Base) objCoca;
-            
+            //dependiendo de como le pegue al brick, es hacia donde va la bola
+            //la bola le quita vida a los bricks dependiendo de 
+            //la vida de la bola
+            //si la bola destrulle el brick
+            //se le suma score al jugador
             if((basBola.getY() > (basBrickCoca.getY() +
                     (basBrickCoca.getAlto() / 2))) && 
                     (basBola.getY() < (basBrickCoca.getY() +
@@ -902,9 +1043,14 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             }
         }
         
+        //se checa colision con la bola y los bricks de xsis
         for(Object objXsis : lnkXsis) {
             basBrickXsis = (Base) objXsis;
-            
+            //dependiendo de como le pegue al brick, es hacia donde va la bola
+            //la bola le quita vida a los bricks dependiendo de 
+            //la vida de la bola
+            //si la bola destrulle el brick
+            //se le suma score al jugador
             if((basBola.getY() > (basBrickXsis.getY() +
                     (basBrickXsis.getAlto() / 2))) && 
                     (basBola.getY() < (basBrickXsis.getY() +
@@ -1019,9 +1165,14 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             }
         }
         
+        //se checa colision con la bola y los bricks de meth
         for(Object objMeth : lnkMeth) {
             basBrickMeth = (Base) objMeth;
-            
+            //dependiendo de como le pegue al brick, es hacia donde va la bola
+            //la bola le quita vida a los bricks dependiendo de 
+            //la vida de la bola
+            //si la bola destrulle el brick
+            //se le suma score al jugador
             if((basBola.getY() > (basBrickMeth.getY() +
                     (basBrickMeth.getAlto() / 2))) && 
                     (basBola.getY() < (basBrickMeth.getY() +
@@ -1136,9 +1287,13 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             }
         }
         
+        //checo colision de bola con los bricks especiales
         for(Object objEspecial : lnkEspecial) {
             basBrickEspecial = (Base) objEspecial;
-            
+            //dependiendo de como le pegue al brick, es hacia donde va la bola
+            //la bola le quita una vida a los bricks especiales
+            //si la bola destrulle el brick
+            //saldra algo bueno o malo para que lo atrape el jugador
             if((basBola.getY() > (basBrickEspecial.getY() +
                     (basBrickEspecial.getAlto() / 2))) && 
                     (basBola.getY() < (basBrickEspecial.getY() +
@@ -1225,7 +1380,8 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                     souBrickCrash.play();
                 }
             }
-            
+            //si el brick especial se destrullo
+            //verificar al azar que poder recibira el jugador si lo cacha
             if(basBrickEspecial.getVidas() <= 0) {
                 if(basBrickEspecial.getVelocidad() < 4) {
                     iRan = (int) (Math.random() * 6);
@@ -1268,7 +1424,9 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 }
             }
         }
-        
+        //si ya se destrullo un brick especial
+        //verifica que poder es y checa si la bola colisiona con el poder
+        //para hacer lo que es poder haga
         if(bEspecial) {
             switch(iRan) {
                 case 0:
@@ -1358,7 +1516,7 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
      * 
      */
     public void levelUp() {
-
+        //reinicio algunos valores a los iniciales
         iDirBola = 0;
         iDirBase = 0;
         iVelBase = 10;
@@ -1370,10 +1528,12 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
         bEspecial = false;
         bEndGame = false;
         
+        //detengo unos sonidos, y le pongo play a otro
         souMusica.stop();
         souIntro.stop();
         souGameStart.play();
         
+        //reinicio imagenes y posiciones de base y bola
         basBase.setImagen(imaBase);
         basBase.setX(((getWidth() / 2) - (basBase.getAncho() / 2)));
         basBase.setY(getHeight() - basBase.getAlto());
@@ -1385,13 +1545,13 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 (basBola.getAncho() / 2));
         basBola.setY(basBase.getY() - basBola.getAlto() - 1);
         
-        
+        //limpio la lista encadenada y la vuelvo a crear
         lnkEspecial.clear();
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickEspecial
             imaBrickEspecial = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickespecial.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickEspecial
             basBrickEspecial = new Base(0, 0, imaBrickEspecial, iVidasEspecial);
             basBrickEspecial.setVidas(1);
             basBrickEspecial.setVelocidad(1);
@@ -1414,12 +1574,13 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             lnkEspecial.add(basBrickEspecial);
         }
         
+        //limpio la lista encadenada y la vuelvo a crear
         lnkCoca.clear();
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickCoca
             imaBrickCoca = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickcocaina.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickCoca
             basBrickCoca = new Base(0, 0, imaBrickCoca, iVidasCocaina);
             basBrickCoca.setVidas(6);
             if(iI == 0) {
@@ -1441,12 +1602,13 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             lnkCoca.add(basBrickCoca);
         }
         
+        //limpio la lista encadenada y la vuelvo a crear
         lnkHero.clear();
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickHero
             imaBrickHero = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickheroina.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickHero
             basBrickHero = new Base(0, 0, imaBrickHero, iVidasHeroina);
             basBrickHero.setVidas(4);
             if(iI == 0) {
@@ -1468,12 +1630,13 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             lnkHero.add(basBrickHero);
         }
         
+        //limpio la lista encadenada y la vuelvo a crear
         lnkXsis.clear();
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickXsis
             imaBrickXsis = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickxtasis.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickXsis
             basBrickXsis = new Base(0, 0, imaBrickXsis, iVidasXtasis);
             basBrickXsis.setVidas(2);
             if(iI == 0) {
@@ -1495,12 +1658,13 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             lnkXsis.add(basBrickXsis);
         }
         
+        //limpio la lista encadenada y la vuelvo a crear
         lnkMeth.clear();
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickMeth
             imaBrickMeth = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickmeth.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickMeth
             basBrickMeth = new Base(0, 0, imaBrickMeth, iVidasMeth);
             basBrickMeth.setVidas(8);
             if(iI == 0) {
@@ -1531,6 +1695,7 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
      * 
      */
     public void reset() {
+        //reseteo los valores a los iniciales para poder volver a jugar
         iVidasPlayer = 5;
         iLevel = 1;
         iScore = 0;
@@ -1567,10 +1732,10 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
         
         lnkEspecial.clear();
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickEspecial
             imaBrickEspecial = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickespecial.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickEspecial
             basBrickEspecial = new Base(0, 0, imaBrickEspecial, iVidasEspecial);
             basBrickEspecial.setVidas(1);
             basBrickEspecial.setVelocidad(1);
@@ -1595,10 +1760,10 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
         
         lnkCoca.clear();
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickCoca
             imaBrickCoca = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickcocaina.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickCoca
             basBrickCoca = new Base(0, 0, imaBrickCoca, iVidasCocaina);
             basBrickCoca.setVidas(6);
             if(iI == 0) {
@@ -1622,10 +1787,10 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
         
         lnkHero.clear();
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickHero
             imaBrickHero = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickheroina.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickHero
             basBrickHero = new Base(0, 0, imaBrickHero, iVidasHeroina);
             basBrickHero.setVidas(4);
             if(iI == 0) {
@@ -1649,10 +1814,10 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
         
         lnkXsis.clear();
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickXsis
             imaBrickXsis = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickxtasis.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickXsis
             basBrickXsis = new Base(0, 0, imaBrickXsis, iVidasXtasis);
             basBrickXsis.setVidas(2);
             if(iI == 0) {
@@ -1676,10 +1841,10 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
         
         lnkMeth.clear();
         for(int iI = 0; iI < 4; iI++){
-            // se crea imagen de BrickCoca1
+            // se crea imagen de BrickMeth
             imaBrickMeth = Toolkit.getDefaultToolkit().
                     getImage(this.getClass().getResource("brickmeth.png"));
-            // Creo a BrickCoca1
+            // Creo a BrickMeth
             basBrickMeth = new Base(0, 0, imaBrickMeth, iVidasMeth);
             basBrickMeth.setVidas(8);
             if(iI == 0) {
@@ -1722,15 +1887,39 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
         }
 
         if ((iVidasPlayer > 0) && (iLevel < 4)) {
-            // creo imagen para el background pero es un error por que el fondo 
-            //esta en imagenraton
-            URL urlImagenFondo = this.getClass().getResource("fondo_BrBa.jpg");
-            Image imaImagenEspacio = 
-                    Toolkit.getDefaultToolkit().getImage(urlImagenFondo);
+            if(iLevel == 1) {
+                // creo imagen para el background pero es un error por que el fondo 
+                //esta en imagenraton
+                URL urlImagenFondo = this.getClass().getResource("fondo_BrBa.jpg");
+                Image imaImagenEspacio = 
+                        Toolkit.getDefaultToolkit().getImage(urlImagenFondo);
 
-            // Despliego la imagen
-            graGraficaApplet.drawImage(imaImagenEspacio, 0, 0, 
-                    getWidth(), getHeight(), this);
+                // Despliego la imagen
+                graGraficaApplet.drawImage(imaImagenEspacio, 0, 0, 
+                        getWidth(), getHeight(), this);
+            }
+            else if(iLevel == 2) {
+                // creo imagen para el background pero es un error por que el fondo 
+                //esta en imagenraton
+                URL urlImagenFondo = this.getClass().getResource("Fondo2.png");
+                Image imaImagenEspacio = 
+                        Toolkit.getDefaultToolkit().getImage(urlImagenFondo);
+
+                // Despliego la imagen
+                graGraficaApplet.drawImage(imaImagenEspacio, 0, 0, 
+                        getWidth(), getHeight(), this);
+            }
+            else if(iLevel == 3) {
+                // creo imagen para el background pero es un error por que el fondo 
+                //esta en imagenraton
+                URL urlImagenFondo = this.getClass().getResource("fondo3.png");
+                Image imaImagenEspacio = 
+                        Toolkit.getDefaultToolkit().getImage(urlImagenFondo);
+
+                // Despliego la imagen
+                graGraficaApplet.drawImage(imaImagenEspacio, 0, 0, 
+                        getWidth(), getHeight(), this);
+            }
         }
         //Si iVidas es igual a 0, mostrar imagen de Game Over
         else if(iVidasPlayer <= 0) {
