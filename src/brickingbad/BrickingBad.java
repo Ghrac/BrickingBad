@@ -1888,9 +1888,9 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
 
         if ((iVidasPlayer > 0) && (iLevel < 4)) {
             if(iLevel == 1) {
-                // creo imagen para el background pero es un error por que el fondo 
-                //esta en imagenraton
-                URL urlImagenFondo = this.getClass().getResource("fondo_BrBa.jpg");
+                // creo imagen para el background
+                URL urlImagenFondo = this.getClass().
+                        getResource("fondo_BrBa.jpg");
                 Image imaImagenEspacio = 
                         Toolkit.getDefaultToolkit().getImage(urlImagenFondo);
 
@@ -1899,8 +1899,7 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                         getWidth(), getHeight(), this);
             }
             else if(iLevel == 2) {
-                // creo imagen para el background pero es un error por que el fondo 
-                //esta en imagenraton
+                // creo imagen para el background
                 URL urlImagenFondo = this.getClass().getResource("Fondo2.png");
                 Image imaImagenEspacio = 
                         Toolkit.getDefaultToolkit().getImage(urlImagenFondo);
@@ -1910,8 +1909,7 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                         getWidth(), getHeight(), this);
             }
             else if(iLevel == 3) {
-                // creo imagen para el background pero es un error por que el fondo 
-                //esta en imagenraton
+                // creo imagen para el background
                 URL urlImagenFondo = this.getClass().getResource("fondo3.png");
                 Image imaImagenEspacio = 
                         Toolkit.getDefaultToolkit().getImage(urlImagenFondo);
@@ -1923,8 +1921,7 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
         }
         //Si iVidas es igual a 0, mostrar imagen de Game Over
         else if(iVidasPlayer <= 0) {
-            // creo imagen para el background pero es un error por que el fondo 
-            //esta en imagenraton
+            // creo imagen para el background si pierdes
             URL urlImagenFondo = this.getClass().getResource("PERDISTE.png");
             Image imaImagenEspacio = 
                     Toolkit.getDefaultToolkit().getImage(urlImagenFondo);
@@ -1980,7 +1977,12 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
             //Si la imagen ya se cargo
             if (basBase != null && basBola != null && basBrickCoca != null && 
                     basBrickHero != null && basBrickXsis != null && 
-                    basBrickMeth != null) {                                         //especificar mas
+                    basBrickMeth != null && basBrickEspecial != null &&
+                    basEspMenosVida != null && basEspMasVida != null &&
+                    basEspX2Vel != null && basEspX2Power != null && 
+                    basEspMasBarra != null && basEspMenosBarra != null && 
+                    aniHero != null && aniMeth != null && aniCoca != null &&
+                    aniXsis != null) {
                 //Dibuja la imagen de la Base en la posicion actualizada
                 g.drawImage(basBase.getImagen(), basBase.getX(),
                         basBase.getY(), this);
@@ -1989,25 +1991,31 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 g.drawImage(basBola.getImagen(), basBola.getX(),
                         basBola.getY(), this);
                 
+                //Dibuja la imagen de la MenosVida en la posicion actualizada
                 g.drawImage(basEspMenosVida.getImagen(), basEspMenosVida.getX(),
                         basEspMenosVida.getY(), this);
                 
+                //Dibuja la imagen de la MasVida en la posicion actualizada
                 g.drawImage(basEspMasVida.getImagen(), basEspMasVida.getX(),
                         basEspMasVida.getY(), this);
                 
+                //Dibuja la imagen de la MenosBarra en la posicion actualizada
                 g.drawImage(basEspMenosBarra.getImagen(), 
                         basEspMenosBarra.getX(), basEspMenosBarra.getY(), this);
                 
+                //Dibuja la imagen de la MasBarra en la posicion actualizada
                 g.drawImage(basEspMasBarra.getImagen(), basEspMasBarra.getX(),
                         basEspMasBarra.getY(), this);
                 
+                //Dibuja la imagen de la X2Vel en la posicion actualizada
                 g.drawImage(basEspX2Vel.getImagen(), basEspX2Vel.getX(),
                         basEspX2Vel.getY(), this);
                 
+                //Dibuja la imagen de la X2Power en la posicion actualizada
                 g.drawImage(basEspX2Power.getImagen(), basEspX2Power.getX(),
                         basEspX2Power.getY(), this);
                 
-            
+                //Dibuja las imagenes de la BrickCoca en la posicion actualizada
                 for(Object objBrickCoca : lnkCoca) {
                     basBrickCoca = (Base) objBrickCoca;
                     //Dibuja la imagen de la BrickCoca en la posicion 
@@ -2038,6 +2046,7 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                             basBrickCoca.getY(), this);
                 }
             
+                //Dibuja las imagenes de la BrickHero en la posicion actualizada
                 for(Object objBrickHero : lnkHero) {
                     basBrickHero = (Base) objBrickHero;
                     //Dibuja la imagen de la BrickHero en la posicion 
@@ -2046,16 +2055,20 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                             (basBrickHero.getVidas() > - 5)) {
                         switch(basBrickHero.getiNumLista()){
                             case 0:
-                                g.drawImage(aniHero.getImagen(), 50, 100, this);
+                                g.drawImage(aniHero.getImagen(), 
+                                        50, 100, this);
                                 break;
                             case 1:
-                                g.drawImage(aniHero.getImagen(), 150, 100, this);
+                                g.drawImage(aniHero.getImagen(), 
+                                        150, 100, this);
                                 break;
                             case 2:
-                                g.drawImage(aniHero.getImagen(), 250, 100, this);
+                                g.drawImage(aniHero.getImagen(), 
+                                        250, 100, this);
                                 break;
                             case 3:
-                                g.drawImage(aniHero.getImagen(), 350, 100, this);
+                                g.drawImage(aniHero.getImagen(), 
+                                        350, 100, this);
                                 break;
                         }
                         basBrickHero.setVidas(basBrickHero.getVidas() - 1);
@@ -2064,6 +2077,7 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                             basBrickHero.getY(), this);
                 }
             
+                //Dibuja las imagenes de la BrickXsis en la posicion actualizada
                 for(Object objBrickXsis : lnkXsis) {
                     basBrickXsis = (Base) objBrickXsis;
                     //Dibuja la imagen de la BrickXsis en la posicion 
@@ -2094,6 +2108,7 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                             basBrickXsis.getY(), this);
                 }
             
+                //Dibuja las imagenes de la BrickMeth en la posicion actualizada
                 for(Object objBrickMeth : lnkMeth) {
                     basBrickMeth = (Base) objBrickMeth;
                     //Dibuja la imagen de la BrickMeth en la posicion 
@@ -2102,16 +2117,20 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                             (basBrickMeth.getVidas() > - 5)) {
                         switch(basBrickMeth.getiNumLista()){
                             case 0:
-                                g.drawImage(aniMeth.getImagen(), 50, 200, this);
+                                g.drawImage(aniMeth.getImagen(), 
+                                        50, 200, this);
                                 break;
                             case 1:
-                                g.drawImage(aniMeth.getImagen(), 150, 200, this);
+                                g.drawImage(aniMeth.getImagen(), 
+                                        150, 200, this);
                                 break;
                             case 2:
-                                g.drawImage(aniMeth.getImagen(), 350, 200, this);
+                                g.drawImage(aniMeth.getImagen(), 
+                                        350, 200, this);
                                 break;
                             case 3:
-                                g.drawImage(aniMeth.getImagen(), 450, 200, this);
+                                g.drawImage(aniMeth.getImagen(), 
+                                        450, 200, this);
                                 break;
                         }
                         basBrickMeth.setVidas(basBrickMeth.getVidas() - 1);
@@ -2120,6 +2139,8 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                             basBrickMeth.getY(), this);
                 }
                 
+                //Dibuja las imagenes de la BrickEspecial en la posicion
+                //actualizada
                 for(Object objBrickEspecial : lnkEspecial) {
                     basBrickEspecial = (Base) objBrickEspecial;
                     //Dibuja la imagen de la BrickEspecial en la posicion 
@@ -2135,12 +2156,19 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 g.drawString("No se cargo la imagen..", 20, 550);
             }
             
+            //letras color blanco
+            //font Verdana y tamaño 20
+            //muestra el score, las vidas, y el nivel del jugador
             g.setColor(Color.white);
             g.setFont(new Font("Verdana", Font.PLAIN, 20));
             // dibuja el score
             g.drawString("Score: " + iScore + "  Vidas: " + iVidasPlayer +
                     " Level: " + iLevel, 20, 40);
         }
+        
+        //si el jugador perdio o gano
+        //muestra en pantalla fin de juego y la instruccion para empezar de 
+        //nuevo a jugar
         else if((iVidasPlayer <= 0) || (iLevel > 3)) {
             g.setColor(Color.white);
             g.setFont(new Font("Verdana", Font.PLAIN, 30));
@@ -2170,11 +2198,13 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
      * @param e 
      */
     public void keyPressed(KeyEvent keyPress) {
+        //si le pica a la flecha de la derecha
         if (keyPress.getKeyCode() == KeyEvent.VK_RIGHT) {
-            iDirBase = 1;
+            iDirBase = 1; //se mueve a la derecha
         }
+        //si le pica a la flecha de la izquierda
         else if (keyPress.getKeyCode() == KeyEvent.VK_LEFT) {
-            iDirBase = 2;
+            iDirBase = 2; //se mueve a la izquierda
         }
     }
 
@@ -2187,19 +2217,25 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
      * @param e 
      */
     public void keyReleased(KeyEvent keyRel) {
+        //si suelta el boton de la izquierda se detiene
         if (keyRel.getKeyCode() == KeyEvent.VK_RIGHT) {
             iDirBase = 0;
         }
+        //si suelta el boton de la izquierda se detiene
         if (keyRel.getKeyCode() == KeyEvent.VK_LEFT) {
             iDirBase = 0;
         }
+        //si se le pica a la p se pausa o reanuda el juego
         if (keyRel.getKeyCode() == KeyEvent.VK_P) {
             bPausa = !bPausa;
         }
+        //si se presiona la s
         if (keyRel.getKeyCode() == KeyEvent.VK_S) {
+            //se quita la pausa en caso de haber
             if(bPausa) {
                 bPausa = false;
             }
+            //empieza el juego junto con la musica
             if(!bGameStart) {
                 bGameStart = true;
                 souIntro.stop();
@@ -2207,12 +2243,16 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 souGameStart.stop();
                 souMusica.play();
             }
+            //si ya se habia acabado el juego, vuelve a empezar
             if((iVidasPlayer <= 0) || (iLevel > 3)) {
                 reset();
             }
         }
+        //si ya empezo el juego
         if (bGameStart){
+            //y se le da click al space
             if (keyRel.getKeyCode() == KeyEvent.VK_SPACE) {
+                //se suelta la bola
                 bSoltarBola = true;
                 if(!bSpace) {
                     iDirBola = 1;
@@ -2220,7 +2260,10 @@ public class BrickingBad extends JFrame implements Runnable, KeyListener {
                 }
             }
         }
+        //si se le da click a la i
         if (keyRel.getKeyCode() == KeyEvent.VK_I) {
+            //se ponen o quitan las instrucciones
+            //se pausa o empieza la musica
             bInstrucciones = !bInstrucciones;
             souIntro.stop();
             souMusica.stop();
